@@ -36,3 +36,47 @@ body{
         padding-top: 30px;
     }
 }
+
+.white-mode{
+    .artwork-instruction{
+        border: 1px solid #ffffff;
+        padding: 15px;
+        background: #fff;
+        border: 1px solid #f3f3f3cc;
+        color: #000;
+    }
+    .tab-content{
+        padding-top: 0;
+        padding: 15px 20px;
+        background: #fff;
+    }
+    label{
+        &.form-label{
+            color: #000;
+            font-weight: 700;
+            font-size: 12px;
+        }
+    }
+    
+}
+.dark-mode{
+    .tab-content{
+        background-color: #2b2c40;
+    }
+}
+
+.click_btn{
+    background: none;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+    color: blue;
+}
+
+.tabs-item{
+    button{
+        text-align: left;
+        box-shadow: none;
+    }
+}

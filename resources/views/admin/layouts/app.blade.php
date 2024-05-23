@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Karhari Media Industry') }}</title>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <!-- <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet"> -->
@@ -55,9 +55,16 @@ layout-navbar-fixed dark-style layout-menu-fixed layout-menu-collapsed
 
 @auth
     @if(Auth::user()->theme_mode =='dark')
+
+      <?php
+      $classDark = "dark-mode";
+      ?>
         <link rel="stylesheet"  type="text/css" href="{{ asset('assets/vendor/css/rtl/core-dark.css') }}"  />
         <link rel="stylesheet"  type="text/css" href="{{ asset('assets/vendor/css/rtl/theme-default-dark.css') }}" />
     @else
+     <?php
+      $classDark = "white-mode";
+      ?>
         <link rel="stylesheet"  type="text/css" href="{{ asset('assets/vendor/css/rtl/core.css') }}"  />
         <link rel="stylesheet"  type="text/css" href="{{ asset('assets/vendor/css/rtl/theme-default.css') }}" />
     @endif
@@ -70,7 +77,7 @@ layout-navbar-fixed dark-style layout-menu-fixed layout-menu-collapsed
       <link rel="stylesheet"  type="text/css" href="{{ asset('assets/custom/css/custom.css') }}"/>
 
 </head>
-<body>
+<body class="<?=$classDark;?>">
     <div id="app">
         <main class="py-0">
           <div class="site-container">
